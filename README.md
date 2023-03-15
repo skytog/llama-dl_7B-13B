@@ -4,23 +4,6 @@
 
 [HN discussion](https://news.ycombinator.com/item?id=35026902) | [Twitter announcement](https://twitter.com/theshawwn/status/1632238214529400832)
 
-## News
-
-**Update (March 7, 3:35 PM CST)**: Looking to inference from the model? See https://github.com/shawwn/llama-dl/issues/1#issuecomment-1458870564 to use the improved sampler. (Facebook's sampler was using poor defaults, so no one was able to get anything good out of the model till now.)
-
-**Update (March 5, 12:52 PM CST)**: [@anitakirkovska](https://twitter.com/anitakirkovska) let us use their fabulous llama photo. If you happen to like the new header image as much as I do, be sure to check out their [AI newsletter](https://www.theprompt.io/) and their [tweets about us](https://twitter.com/anitakirkovska/status/1632447982720131074).
-
-**Update (March 5, 9:51 AM CST)**: HN user MacsHeadroom left a [valuable comment](https://news.ycombinator.com/item?id=35029766):
-
-> I'm running LLaMA-65B on a single A100 80GB with 8bit quantization. $1.5/hr on vast.ai
->
-> The output is at least as good as davinci.
->
-> I think some early results are using bad repetition penalty and/or temperature settings. I had to set both fairly high to get the best results. (Some people are also incorrectly comparing it to chatGPT/ChatGPT API which is not a good comparison. But that's a different problem.)
->
-> I've had it translate, write poems, tell jokes, banter, write executable code. It does it all-- and all on a single card.
-
-
 ## Intro
 
 This repository contains a high-speed download of LLaMA, Facebook's 65B parameter model that was recently made available via torrent. (Discussion: [Facebook LLAMA is being openly distributed via torrents](https://news.ycombinator.com/item?id=35007978))
@@ -96,29 +79,5 @@ Technically, it may be illegal to knowingly use a private download link that was
 **Update**: Facebook shut off the link a couple hours after this repo went live. I mirrored everything to R2 and updated the script to point to that instead.
 
 Note that LLaMA was released under a ["non-commercial bespoke license"](https://github.com/facebookresearch/llama/blob/main/MODEL_CARD.md). Interestingly, Nvidia had a similar arrangement for StyleGAN, but that didn't stop Artbreeder from using it anyway. Nvidia never seemed to care enough to go after them. But if you [launch your own OpenAI API](https://github.com/shawwn/openai-server) and start charging money, don't be surprised when Facebook's lawyers come knocking.
-
-## Final thoughts
-
-I was shocked that this script was distributed with the original torrent, and that no one seemed to notice (a) that it still works, and (b) is almost 20x faster than the torrent method. I was impatient and curious to try to run 65B on an 8xA100 cluster, so I didn't want to wait till tomorrow and started poking around, which is when I found this. I decided to just tweet it out and let you, fellow scientists and hackers, enjoy it before Facebook notices and shuts it off.
-
-"Power to the people" is an overused trope, but as a research scientist, I feel it's important to let individual hackers be able to experiment with the same tools, techniques, and systems that professional ML researchers are fortunate to have access to. This is a tricky situation, because at some point between now and 10 years from now, this might become dangerous -- AI alarmists often ask "Would you want random people experimenting with nuclear weapons in their basement?" My answer is "No, but we're not there yet."
-
-Word on Twitter is that LLaMA's samples seem worse than GPT-3 by a large margin, but then I realized no one has really been able to try the full 65B model yet, for a combination of reasons. (Mostly lack of access to 8xA100 hardware.) So I decided to try it out for myself and see.
-
-Even if it's GPT-3 level, the fact is, LLaMA is already openly available. The torrent isn't going anywhere. So my own thoughts on this are mostly irrelevant; determined hackers can get it themselves anyway.
-
-But for what it's worth, my personal opinion is that LLaMA probably isn't OpenAI-grade -- there's a big difference between training a model in an academic setting vs when your entire company depends on it for wide-scale commercial success. I wasn't impressed that 30B didn't seem to know who Captain Picard was.
-
-People have already started decrying this leak as dangerous. But everyone used to say the same thing about 1.5B. (In fact, the allure of 1.5B's grandiose claims was what drove me to take ML seriously in 2019.) Turns out, four years later, no one really cares about 1.5B anymore, and it certainly didn't cause wide-scale societal harm. I doubt LLaMA will either.
-
-2023 will be interesting. I can't wait for 2024.
-
-Signed with love,
-
-Shawn Presser
-
-twitter: [@theshawwn](https://twitter.com/theshawwn)
-
-HN: [sillysaurusx](https://news.ycombinator.com/user?id=sillysaurusx)
 
 
